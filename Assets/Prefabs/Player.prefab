@@ -30,11 +30,12 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -21, y: 42, z: 0}
-  m_LocalScale: {x: 7, y: 10, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 362676492335376227}
-  - {fileID: 55341190519856253}
+  - {fileID: 3731859250222256089}
+  - {fileID: 2987464017870336911}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2342919585975251719
@@ -165,7 +166,7 @@ MonoBehaviour:
   SpawnTileDistance: 30
   speed: 8
   rotationSpeed: 40
-  forwardSpeedCap: 10
+  forwardSpeedCap: 16
   extraRotation: 0
   movementDirection: {x: 0, y: 0, z: 0}
   isDrifting: 0
@@ -222,7 +223,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: cec3d022032294625bc3b21c7f8e2d25, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -295,17 +296,17 @@ BoxCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 7, y: 9.99}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 6, y: 9}
   m_EdgeRadius: 0
---- !u!1 &2643195308404642251
+--- !u!1 &1470757248313468116
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -313,135 +314,87 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 55341190519856253}
-  - component: {fileID: 5961947411083864640}
-  - component: {fileID: 266339750617636712}
-  - component: {fileID: 3142091312567433471}
+  - component: {fileID: 2987464017870336911}
+  - component: {fileID: 8194156187275907013}
+  - component: {fileID: 8593733434750318672}
   m_Layer: 0
-  m_Name: Main Camera
-  m_TagString: MainCamera
+  m_Name: CinemachineCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &55341190519856253
+--- !u!4 &2987464017870336911
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2643195308404642251}
+  m_GameObject: {fileID: 1470757248313468116}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.5, y: 0, z: 0, w: 0.8660254}
-  m_LocalPosition: {x: 0, y: -2.51, z: -20}
-  m_LocalScale: {x: 0.25, y: 0.2, z: 1}
+  m_LocalRotation: {x: -0.42261827, y: -0, z: -0, w: 0.9063079}
+  m_LocalPosition: {x: 0, y: -40, z: -20}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5222349895095305546}
-  m_LocalEulerAnglesHint: {x: -60, y: 0, z: 0}
---- !u!20 &5961947411083864640
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2643195308404642251}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_Iso: 200
-  m_ShutterSpeed: 0.005
-  m_Aperture: 16
-  m_FocusDistance: 10
-  m_FocalLength: 50
-  m_BladeCount: 5
-  m_Curvature: {x: 2, y: 11}
-  m_BarrelClipping: 0.25
-  m_Anamorphism: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 34
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: -1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 0
-  m_HDR: 1
-  m_AllowMSAA: 0
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 0
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!81 &266339750617636712
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2643195308404642251}
-  m_Enabled: 1
---- !u!114 &3142091312567433471
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8194156187275907013
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2643195308404642251}
+  m_GameObject: {fileID: 1470757248313468116}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-  m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
-  m_RequiresOpaqueTextureOption: 2
-  m_CameraType: 0
-  m_Cameras: []
-  m_RendererIndex: -1
-  m_VolumeLayerMask:
-    serializedVersion: 2
-    m_Bits: 1
-  m_VolumeTrigger: {fileID: 0}
-  m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
-  m_Antialiasing: 0
-  m_AntialiasingQuality: 2
-  m_StopNaN: 0
-  m_Dithering: 0
-  m_ClearDepth: 1
-  m_AllowXRRendering: 1
-  m_AllowHDROutput: 1
-  m_UseScreenCoordOverride: 0
-  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
-  m_RequiresDepthTexture: 0
-  m_RequiresColorTexture: 0
-  m_TaaSettings:
-    m_Quality: 3
-    m_FrameInfluence: 0.1
-    m_JitterScale: 1
-    m_MipBias: 0
-    m_VarianceClampScale: 0.9
-    m_ContrastAdaptiveSharpening: 0
-  m_Version: 2
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
+  Priority:
+    Enabled: 0
+    m_Value: 0
+  OutputChannel: 1
+  StandbyUpdate: 2
+  m_StreamingVersion: 20241001
+  m_LegacyPriority: 0
+  Target:
+    TrackingTarget: {fileID: 3731859250222256089}
+    LookAtTarget: {fileID: 0}
+    CustomLookAtTarget: 0
+  Lens:
+    FieldOfView: 60
+    OrthographicSize: 22.432232
+    NearClipPlane: 0.3
+    FarClipPlane: 1000
+    Dutch: 0
+    ModeOverride: 0
+    PhysicalProperties:
+      GateFit: 2
+      SensorSize: {x: 21.946, y: 16.002}
+      LensShift: {x: 0, y: 0}
+      FocusDistance: 10
+      Iso: 200
+      ShutterSpeed: 0.005
+      Aperture: 16
+      BladeCount: 5
+      Curvature: {x: 2, y: 11}
+      BarrelClipping: 0.25
+      Anamorphism: 0
+  BlendHint: 0
+--- !u!114 &8593733434750318672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470757248313468116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4afa82ae3200b82408d605c3dbdd1e38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineRotateWithFollowTarget
+  Damping: 0
 --- !u!1 &3111322918500034890
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,13 +421,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3111322918500034890}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.8405362, y: -0, z: -0, w: 0.5417555}
-  m_LocalPosition: {x: 0, y: -0.066, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.49421158, z: 0.16731988}
+  m_LocalRotation: {x: 0.13566503, y: -0, z: -0, w: 0.99075484}
+  m_LocalPosition: {x: 0, y: 0, z: 0.31}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5222349895095305546}
-  m_LocalEulerAnglesHint: {x: 114.394, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 15.594, y: 0, z: 0}
 --- !u!198 &6953232489845923552
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -483,7 +436,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3111322918500034890}
   serializedVersion: 8
-  lengthInSec: 1
+  lengthInSec: 0.5
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -548,7 +501,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 1
+  moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -558,7 +511,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 3
+      scalar: 1.5
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -611,7 +564,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 1.2
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -729,7 +682,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 2.8
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -1045,7 +998,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    gravitySource: 0
+    gravitySource: 1
     maxNumParticles: 1000
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
@@ -1181,7 +1134,7 @@ ParticleSystem:
     m_SpriteRenderer: {fileID: 0}
     m_UseMeshMaterialIndex: 0
     m_UseMeshColors: 1
-    alignToDirection: 0
+    alignToDirection: 1
     m_Texture: {fileID: 0}
     m_TextureClipChannel: 3
     m_TextureClipThreshold: 0
@@ -1193,7 +1146,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.95
+      value: 0.0001
       mode: 0
       spread: 0
       speed:
@@ -1250,7 +1203,7 @@ ParticleSystem:
           m_PostInfinity: 2
           m_RotationOrder: 4
     arc:
-      value: 359.85
+      value: 360
       mode: 0
       spread: 0
       speed:
@@ -1312,7 +1265,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 100
+      scalar: 2
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -1428,8 +1381,8 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
-          time: 0.48330054
-          value: 1
+          time: 0
+          value: 0.7692318
           inSlope: -0.28789616
           outSlope: -0.28789616
           tangentMode: 0
@@ -1437,13 +1390,13 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.5343811
         - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: -0.53565514
-          outSlope: -0.53565514
+          time: 0.99316406
+          value: 1
+          inSlope: 0.28621647
+          outSlope: 0.28621647
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.60314345
+          inWeight: 0.21648702
           outWeight: 0.33333334
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -1751,7 +1704,7 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
-        key1: {r: 0, g: 0, b: 0, a: 0}
+        key1: {r: 1, g: 1, b: 1, a: 0}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -1810,8 +1763,8 @@ ParticleSystem:
         m_NumAlphaKeys: 2
   UVModule:
     serializedVersion: 2
-    enabled: 0
-    mode: 0
+    enabled: 1
+    mode: 1
     timeMode: 0
     fps: 30
     frameOverTime:
@@ -1929,7 +1882,7 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 0}
+    - sprite: {fileID: 21300000, guid: 96e06c72d5c0a485a88379179e1c663e, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
@@ -5224,7 +5177,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e823cd5b5d27c0f4b8256e7c12ee3e6d, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5270,7 +5223,7 @@ ParticleSystemRenderer:
   m_VertexStreams: 00010304
   m_UseCustomTrailVertexStreams: 0
   m_TrailVertexStreams: 00010304
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
@@ -5278,3 +5231,34 @@ ParticleSystemRenderer:
   m_MeshWeighting1: 1
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
+--- !u!1 &4504479666689754979
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3731859250222256089}
+  m_Layer: 0
+  m_Name: cinemachine target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3731859250222256089
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4504479666689754979}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.42261827, y: 0, z: 0, w: 0.9063079}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5222349895095305546}
+  m_LocalEulerAnglesHint: {x: -50, y: 0, z: 0}

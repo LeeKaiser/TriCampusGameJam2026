@@ -106,6 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ee8e69931c8b465b92b3d2c4a573b72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EndGateScript
+  endGameScene: 1
 --- !u!58 &7312549012804037144
 CircleCollider2D:
   m_ObjectHideFlags: 0

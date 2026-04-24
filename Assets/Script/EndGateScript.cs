@@ -18,6 +18,7 @@ public class EndGateScript : MonoBehaviour
         {
             Debug.Log("Finished Game");
             sceneLoad.LoadNextScene(endGameScene);
+            manager.EndGame();
         }
     }
 }

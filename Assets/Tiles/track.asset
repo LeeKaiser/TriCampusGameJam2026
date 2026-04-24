@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f747e8af38fbe4d8819f37be6fd5aa, type: 3}
   m_Name: track
   m_EditorClassIdentifier: Unity.2D.Tilemap.Extras::UnityEngine.HexagonalRuleTile
-  m_DefaultSprite: {fileID: 21300000, guid: 17b01ef825a25475b84444a0265c0c7e, type: 3}
+  m_DefaultSprite: {fileID: 0}
   m_DefaultGameObject: {fileID: 1802975541889718239, guid: 998a6ee6210d04bdebdf81c14383c790, type: 3}
   m_DefaultColliderType: 0
   m_TilingRules: []
