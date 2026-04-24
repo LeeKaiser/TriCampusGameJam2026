@@ -17,8 +17,9 @@ public class EndGateScript : MonoBehaviour
         if (player != null)
         {
             Debug.Log("Finished Game");
-            sceneLoad.LoadNextScene(endGameScene);
             manager.EndGame();
+            sceneLoad.LoadNextScene(endGameScene);
+            
         }
     }
 }

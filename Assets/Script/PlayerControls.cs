@@ -18,8 +18,11 @@ public class PlayerControls : MonoBehaviour
 
     public float SpawnTileDistance = 30;
 
+    public float RemainingTime = 30;
+    public float MaxTime = 30;
+
     [Header("debug")]
-    
+    [SerializeField] int endOfGameScene;
     [SerializeField] float speed;
     [SerializeField] float rotationSpeed;
 
@@ -64,7 +67,12 @@ public class PlayerControls : MonoBehaviour
 
         WrapAroundMap();
 
-        
+        RemainingTime -= Time.deltaTime;
+        if (RemainingTime <= 0)
+        {
+            FindAnyObjectByType<GameManager>().EndGameLoss();
+            FindAnyObjectByType<SceneLoader>().LoadNextScene(endOfGameScene);
+        }
 
     }
 

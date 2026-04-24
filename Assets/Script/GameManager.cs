@@ -55,4 +55,9 @@ public class GameManager : MonoBehaviour
         Destroy(currentPlayer);
 
     }
+
+    public void EndGameLoss()
+    {
+        Destroy(currentPlayer);
+    }
 }

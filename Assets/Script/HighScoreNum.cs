@@ -20,6 +20,7 @@ public class HighScoreNum : MonoBehaviour
 
     void Update()
     {
+        ScoreText.text = Suffix + manager.highscore;
         if (manager.currentPlayer != null)
         {
             if (manager.currentPlayer.GetComponent<PlayerControls>().Points > manager.highscore)
