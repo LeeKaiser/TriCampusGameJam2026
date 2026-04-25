@@ -7,6 +7,7 @@ public class SceneLoader : MonoBehaviour
 {
     public Animator transition;
     public float transitionTime;
+    public AudioClip travelSound;
 
     public void LoadNextScene(int sceneIndex)
     {
@@ -16,6 +17,7 @@ public class SceneLoader : MonoBehaviour
     IEnumerator loadLevel(int sceneIndex)
     {
         transition.SetTrigger("Start");
+        GetComponent<AudioSource>().PlayOneShot(travelSound);
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(sceneIndex);
     }

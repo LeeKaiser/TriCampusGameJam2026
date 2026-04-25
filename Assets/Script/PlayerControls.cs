@@ -68,6 +68,10 @@ public class PlayerControls : MonoBehaviour
         WrapAroundMap();
 
         RemainingTime -= Time.deltaTime;
+        if (RemainingTime >= MaxTime)
+        {
+            RemainingTime = MaxTime; 
+        }
         if (RemainingTime <= 0)
         {
             FindAnyObjectByType<GameManager>().EndGameLoss();
