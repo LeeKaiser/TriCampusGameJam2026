@@ -21,6 +21,8 @@ public class PlayerControls : MonoBehaviour
     public float RemainingTime = 30;
     public float MaxTime = 30;
 
+    public ParticleSystem driftEffect;
+
     [Header("debug")]
     [SerializeField] int endOfGameScene;
     [SerializeField] float speed;
@@ -37,6 +39,8 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] float facingDirectionDifference;
     [SerializeField] LayerMask spawnTileMask;
 
+    [SerializeField] AudioSource audioSource;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -44,6 +48,9 @@ public class PlayerControls : MonoBehaviour
         DriftAction.Enable();
         Application.targetFrameRate = 60;
         movementDirection = transform.up;
+        audioSource = GetComponent<AudioSource>();
+        driftEffect.Pause();
+        audioSource.Pause();
     }
 
     // Update is called once per frame
@@ -56,10 +63,14 @@ public class PlayerControls : MonoBehaviour
         if (DriftAction.IsPressed())
         {
             isDrifting = true;
+            driftEffect.Play();
+            audioSource.UnPause();
         }
         else
         {
             isDrifting = false;
+            driftEffect.Pause();
+            audioSource.Pause();
         }
         if (facingDirectionDifference > BoostAngle || facingDirectionDifference < -BoostAngle){
             forwardSpeedCap += Time.deltaTime * DriftSpeedBoost;

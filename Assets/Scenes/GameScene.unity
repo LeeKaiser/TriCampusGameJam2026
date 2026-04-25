@@ -1006,7 +1006,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fd9563c303314b90bbf6e39c097f47a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreKeep
-  Suffix: 'SCORE:'
+  Suffix: 'SCORE:   '
 --- !u!114 &1592785220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1481,6 +1481,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneLoader
       objectReference: {fileID: 0}
+    - target: {fileID: 5282236973063901585, guid: 94709b3281688454aa687b329fbcba50, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8238279378973904048, guid: 94709b3281688454aa687b329fbcba50, type: 3}
       propertyPath: transition
       value: 
@@ -1664,6 +1668,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1908892010}
     m_Modifications:
+    - target: {fileID: 5811855415050704624, guid: 2e12fd578f9224b3fa4bd867b1158e05, type: 3}
+      propertyPath: Suffix
+      value: 'HIGH:      '
+      objectReference: {fileID: 0}
     - target: {fileID: 6747005958251929916, guid: 2e12fd578f9224b3fa4bd867b1158e05, type: 3}
       propertyPath: m_Name
       value: High Score
